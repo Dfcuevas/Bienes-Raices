@@ -31,22 +31,71 @@
     </div>
   </header>
 
-  <h1 class="fw-300 centrar-texto">Consejos para tener una alberca en tu casa sin gastar demasiado</h1>
-  <img src="img/destacada2.jpg" alt="imagen principal">
+  <h1 class="fw-300 centrar-texto">Contacto</h1>
+  <img src="img/destacada3.jpg" alt="Imagen principal">
 
-  <main class="contenedor seccion contenido-centrado texto-entrada">
-    
-    <p>Escrito el: <span> 20/10/2019 </span> por: <span> Admin </span> </p>
+  <main class="contenedor seccion contenido-centrado">
+    <h2 class="fw-300 centrar-texto">Llena el formulario de contacto</h2>
 
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce at scelerisque enim, sit amet vestibulum odio. Mauris et tortor in lorem consequat efficitur. Integer eget metus tortor. Proin mattis erat vel nisi maximus malesuada. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut non lacinia nulla, eu lobortis nibh. Nulla auctor felis luctus faucibus dictum. Pellentesque semper finibus fermentum. Sed luctus elementum mauris, vel condimentum nulla posuere ornare. Nunc pulvinar tristique dignissim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi ex eros, posuere vel blandit sed, porta id ipsum. Phasellus vehicula sollicitudin odio eu lobortis. 
-    </p>
+    <form action="">
 
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce at scelerisque enim, sit amet vestibulum odio. Mauris et tortor in lorem consequat efficitur. Integer eget metus tortor. Proin mattis erat vel nisi maximus malesuada. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut non lacinia nulla, eu lobortis nibh. Nulla auctor felis luctus faucibus dictum. Pellentesque semper finibus fermentum. Sed luctus elementum mauris, vel condimentum nulla posuere ornare. Nunc pulvinar tristique dignissim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi ex eros, posuere vel blandit sed, porta id ipsum. Phasellus vehicula sollicitudin odio eu lobortis. 
+      <fieldset>
+        <legend>Informacion Personal</legend>
+        <label for="nombre">Nombre:</label>
+        <!--la propiedad for de la etiqueta label, enlaza a la misma con otra etiqueta, en este caso la etiqueta input, pero para que esto ocurra, input tiene que tener un id con el mismo nombre que el for-->
+        <input type="text" id="nombre" placeholder="Tu nombre" required>
 
-    </p>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" placeholder="Tu correo electronico" required>
+
+        <label for="telefono">Telefono:</label>
+        <input type="tel" id="telefono" placeholder="Tu numero de telefono" required>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje"></textarea>
+
+      </fieldset>
+      <fieldset>
+        <legend>Informacion sobre la Propiedad</legend>
+
+        <label for="opciones">Vende o Compra</label>
+        <select id="opciones">
+          <option value="" disabled selected>-- Seleccione --</option>
+          <option value="">Compra</option>
+          <option value="">Vende</option>
+        </select>
+
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" min="0" max="100" step="5">
+      </fieldset>
+      <fieldset>
+        <legend>Contacto</legend>
+
+        <p>Como desea ser contactado:</p>
+
+        <div class="forma-contacto">
+          <label for="cel">Telefono</label>
+          <input type="radio" name="contacto" value="telefono" id="cel">
+
+          <label for="correo">E-Mail</label>
+          <input type="radio" name="contacto" value="correo" id="correo">
+          <!-- Para el radio button, el name hace que cada uno conozca la existencia del otro, y asi seleccionar un desabilita al otro -->
+          <!-- con el value, para el radio button y el select, el backend los reconoce a ellos. -->
+        </div>
+        
+        <p>Si eligió telefono, elija la fecha y hora</p>
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha">
+
+        <label for="hora">Hora:</label>
+        <input type="time" id="hora" min="09:00" max="18:00">
+      </fieldset>
+
+      <input type="submit" value="Enviar" class="boton boton-verde">
+    </form>
+
   </main>
+
 
   <footer class="site-footer seccion">
     <div class="contenedor contenedor-footer">
